@@ -96,7 +96,7 @@ const FiscaliasList = () => {
             rows={fiscalias || []}
             columns={columns || []}
             disableSelectionOnClick
-            getRowId={(row) => row.id_fiscalia}
+            getRowId={(row) => parseInt(row.id_fiscalia)}
             components={{
               NoRowsOverlay: () => (
                 <Stack

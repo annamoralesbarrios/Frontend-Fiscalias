@@ -36,7 +36,7 @@ export const PageLayout = (props) => {
 
   return (
     <Router>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+      <nav style={{backgroundColor:"#142667"}} className="navbar navbar-expand navbar-dark">
         <a href={"/fiscalias"} className="navbar-brand">
           Ministerio Público
         </a>
