@@ -5,7 +5,7 @@ import { Guatemala } from "../const/guatemala";
 import { useToasts } from "react-toast-notifications";
 
 import moment from "moment";
-const AddFiscalia = () => {
+const AddFiscalia = (props) => {
   const [fiscalia, setFiscalia] = useState(null);
   const [deptos, setDepto] = useState([]);
   const [towns, setTown] = useState([]);
@@ -51,7 +51,6 @@ const AddFiscalia = () => {
     )
       .then((data) => {
         setFiscalia({
-          id: data.id,
           agencia: data.agencia,
           codigo: data.codigo,
           tipo: data.tipo,
@@ -65,6 +64,8 @@ const AddFiscalia = () => {
           autoDismiss: true,
         });
         setFiscalia(null);
+        props.history.push("/fiscalias");
+
       })
       .catch((e) => {
         console.log(e);
